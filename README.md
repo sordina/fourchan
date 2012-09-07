@@ -1,4 +1,4 @@
-# Hashell 4chan API / Image URL Dumper
+# Haskell 4chan API / Image URL Dumper
 
 This package acts as a library and an executable.
 
