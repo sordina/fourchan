@@ -13,7 +13,7 @@ main :: IO ()
 main = do
   args <- getArgs
   case args of [b,t] -> threadP b t >>= return . maybe [] (mapMaybe image_url) >>= mapM_ putStrLn
-               _     -> putStrLn "Usage: ./4chan_dump_image_urls <board> <thread>"
+               _     -> putStrLn "Usage: 4chan_dump_image_urls <board> <thread>"
 
 -- Helpers:
 
