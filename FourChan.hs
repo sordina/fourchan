@@ -93,7 +93,7 @@ data Post = Post { post_no           :: Integer
                  deriving Show
 
 
--- Helpers
+-- Helpers:
 
 parsePost p = Post <$> p .:  "no"
                    <*> p .:  "resto"
