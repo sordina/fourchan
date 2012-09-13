@@ -16,4 +16,4 @@ cabal-version:       >=1.8
 executable 4chan_dump_image_urls
   main-is:           4chan_dump_image_urls.hs
   other-modules:     FourChan
-  build-depends:     base ==4.5.*, aeson, http-conduit, bytestring
+  build-depends:     base >=4.5.0, aeson, http-conduit, bytestring
