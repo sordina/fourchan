@@ -75,8 +75,8 @@ data Post = Post { post_no           :: Integer
                  , post_capcode      :: Maybe String
                  , post_country      :: Maybe String
                  , post_country_name :: Maybe String
-                 , post_email        :: String
-                 , post_sub          :: String
+                 , post_email        :: Maybe String
+                 , post_sub          :: Maybe String
                  , post_com          :: String
                  , post_tim          :: Maybe Integer
                  , post_filename     :: Maybe String
@@ -107,8 +107,8 @@ parsePost p = Post <$> p .:  "no"
                    <*> p .:? "capcode"
                    <*> p .:? "country"
                    <*> p .:? "country_name"
-                   <*> p .:  "email"
-                   <*> p .:  "sub"
+                   <*> p .:? "email"
+                   <*> p .:? "sub"
                    <*> p .:  "com"
                    <*> p .:? "tim"
                    <*> p .:? "filename"
