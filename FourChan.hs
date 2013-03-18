@@ -77,7 +77,7 @@ data Post = Post { post_no           :: Integer
                  , post_country_name :: Maybe String
                  , post_email        :: Maybe String
                  , post_sub          :: Maybe String
-                 , post_com          :: String
+                 , post_com          :: Maybe String
                  , post_tim          :: Maybe Integer
                  , post_filename     :: Maybe String
                  , post_ext          :: Maybe String
@@ -109,7 +109,7 @@ parsePost p = Post <$> p .:  "no"
                    <*> p .:? "country_name"
                    <*> p .:? "email"
                    <*> p .:? "sub"
-                   <*> p .:  "com"
+                   <*> p .:? "com"
                    <*> p .:? "tim"
                    <*> p .:? "filename"
                    <*> p .:? "ext"
